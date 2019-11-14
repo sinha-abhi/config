@@ -10,6 +10,8 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ~="cd"
 
+alias ch="chmod"
+alias h="history"
 alias m="man"
 alias t="tree"
 
