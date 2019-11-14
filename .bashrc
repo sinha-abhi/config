@@ -118,3 +118,7 @@ fi
 
 # set bash in vi mode
 set -o vi
+
+function mcd() {
+    mkdir -p "$@" && cd "$_";
+}

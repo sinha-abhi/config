@@ -8,6 +8,9 @@ alias vrc="vi ~/.vimrc"
 
 alias ..="cd .."
 alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ......="cd ../../../../.."
 alias ~="cd"
 
 alias ch="chmod"
