@@ -9,6 +9,12 @@ set number
 set hlsearch
 set ruler
 
+" hopefully doesn't become a pain...
+set textwidth=80
+
+" auto insert current comment leader and wrap comments
+set formatoptions+=rc
+
 " remove bold keywords
 set t_md=
 
