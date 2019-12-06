@@ -1,5 +1,5 @@
 syntax on
-colorscheme slate
+" colorscheme slate
 
 set tabstop=4
 set shiftwidth=4
@@ -12,9 +12,9 @@ set ruler
 " remove bold keywords
 set t_md=
 
-highlight Comment ctermfg=darkgreen
+" :highlight Comment ctermfg=darkgreen
 
-highlight Search ctermfg=grey ctermbg=blue
+" :highlight Search ctermfg=grey ctermbg=blue
 
 nnoremap <silent> <C-l> :nohl<CR><C-l>
 
