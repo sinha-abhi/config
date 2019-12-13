@@ -1,5 +1,5 @@
 syntax on
-" colorscheme slate
+colorscheme slate
 
 set tabstop=4
 set shiftwidth=4
@@ -25,3 +25,7 @@ set t_md=
 nnoremap <silent> <C-l> :nohl<CR><C-l>
 
 autocmd FileType make setlocal noexpandtab
+
+if &term =~ '256color'
+    set t_ut=
+endif

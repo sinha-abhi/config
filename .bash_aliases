@@ -26,3 +26,6 @@ alias syssus="systemctl suspend"
 alias syshib="systemctl hibernate"
 
 alias open="xdg-open"
+
+# almost never use halt-on-error
+alias pdflatex="pdflatex -interaction=nonstopmode"

@@ -11,3 +11,6 @@ cp ~/.gitconfig .
 
 echo "vimrc"
 cp ~/.vimrc .
+
+echo "screenrc"
+cp ~/.screenrc .
