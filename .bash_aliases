@@ -6,6 +6,9 @@ alias bsrc="source ~/.bashrc"
 
 alias vrc="vi ~/.vimrc"
 
+alias screenrc="vi ~/.screenrc"
+alias tmuxconf="vi ~/.tmux.conf"
+
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."

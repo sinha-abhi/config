@@ -14,3 +14,6 @@ cp ~/.vimrc .
 
 echo "screenrc"
 cp ~/.screenrc .
+
+echo "tmux.conf"
+cp ~/.tmux.conf .
