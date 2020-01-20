@@ -16,6 +16,7 @@ alias .....="cd ../../../.."
 alias ......="cd ../../../../.."
 alias ~="cd"
 
+alias c="clear"
 alias ch="chmod"
 alias h="history"
 alias m="man"
