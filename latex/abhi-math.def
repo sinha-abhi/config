@@ -1,8 +1,25 @@
+%
+%% abhi-math.def
 % Commonly used math symbols/notation
 %
-% Abhinav Sinha, sinha45@purdue.edu
-% March 23, 2020
-\usepackage{amsthm, amssymb, amsmath, mathtools, xfrac}
+% Abhinav Sinha
+% Updated April 1, 2020
+
+\ProvidesFile{abhi-math.def}[2020/04/01 v0.0.1 abhi-math.def]
+
+\RequirePackage{amsthm}
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{mathtools}
+\RequirePackage{xfrac}
+
+\RequirePackage{graphicx}
+\RequirePackage{listings}
+
+\RequirePackage{booktabs}
+\RequirePackage{units}
+
+\RequirePackage{xcolor}
 
 \renewcommand{\qedsymbol}{\(\blacksquare\)}
 \DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
@@ -117,7 +134,6 @@
 \providecommand{\vz}{\ensuremath{\vec{z}}}
 \providecommand{\vxi}{\ensuremath{\vecalt{\xi}}}
 \providecommand{\vpi}{\ensuremath{\vecalt{\pi}}}
-
 \providecommand{\vlambda}{\ensuremath{\vecalt{\lambda}}}
 
 % \DeclareMathOperator{\sinh}{sinh} 	already exists
@@ -128,3 +144,75 @@
 % \DeclareMathOperator{\coth}{coth} 	already exists
 
 \DeclareMathOperator{\sgn}{sgn}
+
+%%
+% Code formatting
+
+\definecolor{subtleblue}     {rgb}{0.02,0.04,0.48}
+\definecolor{subtlered}      {rgb}{0.65,0.04,0.07} % RGB 165,10,18
+\definecolor{subtlegreen}    {rgb}{0.06,0.44,0.08}
+\definecolor{subtledarkblue} {rgb}{0,.1,.6}
+\definecolor{lightsubtleblue}{rgb}{0,.4,.6}
+
+\providecommand{\lstbasicfont}{\fontfamily{lmtt}\selectfont}
+\lstset{%
+    basicstyle={\lstbasicfont\footnotesize}, % use font and smaller size
+    showstringspaces=false,                  % do not emphasize spaces in strings
+    tabsize=4,                               % number of spaces of a TAB
+    mathescape=true,escapechar=�,            % escape to latex with �...�
+    aboveskip={\abovedisplayskip},           % a bit of space above
+    belowskip={\belowdisplayskip},           % a bit of space below
+    columns=fixed,                           % nice spacing
+    xleftmargin=1cm,
+    xrightmargin=1cm,
+    % replace relations (like <=) with LaTeX symbols
+    literate=%
+        {~}{{$\neg$}}1 %            \neg
+        {<=}{{\tiny$\leq$}}1 %      \leq
+        {>=}{{\tiny$\geq$}}1 %      \geq
+        {~=}{{\tiny$\neq$}}1 %      \neq
+        {delta}{{\tiny$\Delta$}}1%  \Delta
+}
+
+\lstnewenvironment{pseudocode}[1][]{%
+  \lstset{language=python,#1% % use our version of highlighting
+  }%
+}{}
+
+\lstdefinelanguage{Julia}%
+    {morekeywords={abstract,break,case,catch,const,continue,do,else,elseif,%
+        end,export,false,for,function,immutable,import,importall,if,in,%
+        macro,module,otherwise,quote,return,switch,true,try,type,typealias,%
+        using,while},%
+    sensitive=true,%
+    alsoother={$},%
+    morecomment=[l]\#,%
+    morecomment=[n]{\#=}{=\#},%
+    morestring=[s]{"}{"},%
+    morestring=[m]{'}{'},%
+}[keywords,comments,strings]%
+
+\lstnewenvironment{dispjulia}[1][]{%
+    \lstset{language=Julia,%
+        numbers=none,%
+        frame=none,%
+        keywordstyle=\color{subtleblue},%,      % keywords
+        commentstyle=\color{thegreen},%         % comments
+        stringstyle=\color{subtleed},%          % strings
+        captionpos=b,%
+        #1
+    }%
+}%
+{}
+\lstnewenvironment{numberedjulia}[1][]{%
+    \lstset{language=Julia,%
+        numbers=left,%
+        frame=none,%
+        keywordstyle=\bfseries\color{subtleblue},%, % keywords
+        commentstyle=\color{subtlegreen},%          % comments
+        stringstyle=\color{subtlered},%              % strings
+        captionpos=b,%
+        #1                                          % caption
+    }%
+}%
+{}

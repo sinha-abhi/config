@@ -1,2 +1,6 @@
 # these vim files are actually really annoying with git
+.DS_Store
 *.swp
+
+# test files
+*test*
