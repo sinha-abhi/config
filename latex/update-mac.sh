@@ -5,4 +5,6 @@ echo "Copying class files into $dir..."
 
 sudo cp -v *.{bst,cls,def} $dir
 
+sudo texhash "$dir/.."
+
 echo "done"
