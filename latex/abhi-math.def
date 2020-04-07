@@ -182,8 +182,8 @@
 \lstdefinelanguage{Julia}%
     {morekeywords={abstract,break,case,catch,const,continue,do,else,elseif,%
         end,export,false,for,function,immutable,import,importall,if,in,%
-        macro,module,otherwise,quote,return,switch,true,try,type,typealias,%
-        using,while},%
+        macro,module,mutable,otherwise,quote,return,struct,switch,true,try,
+        type,typealias,using,while},%
     sensitive=true,%
     alsoother={$},%
     morecomment=[l]\#,%
@@ -197,8 +197,8 @@
         numbers=none,%
         frame=none,%
         keywordstyle=\color{subtleblue},%,      % keywords
-        commentstyle=\color{thegreen},%         % comments
-        stringstyle=\color{subtleed},%          % strings
+        commentstyle=\color{subtlegreen},%         % comments
+        stringstyle=\color{subtlered},%          % strings
         captionpos=b,%
         #1
     }%
