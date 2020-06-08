@@ -190,11 +190,13 @@
     morecomment=[n]{\#=}{=\#},%
     morestring=[s]{"}{"},%
     morestring=[m]{'}{'},%
+    mathescape=false,%
 }[keywords,comments,strings]%
 
 \lstnewenvironment{dispjulia}[1][]{%
     \lstset{language=Julia,%
         numbers=none,%
+        mathescape=true,%
         frame=none,%
         keywordstyle=\color{subtleblue},%,      % keywords
         commentstyle=\color{subtlegreen},%         % comments
