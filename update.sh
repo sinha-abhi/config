@@ -17,3 +17,6 @@ cp ~/.screenrc .
 
 echo "tmux.conf"
 cp ~/.tmux.conf .
+
+echo "powerline"
+cp -r ~/.config/powerline .
